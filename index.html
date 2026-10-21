@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="robots" content="noindex, nofollow"><title>KazWorld News: quality review</title>
+<style>
+:root { --bg:#08141f; --card:#102338; --ink:#e8f0f7; --muted:#9fb3c6; --gold:#ffd700; }
+@media (prefers-color-scheme: light) { :root { --bg:#eef3f8; --card:#ffffff; --ink:#10202f; --muted:#51657a; --gold:#a07800; } }
+* { box-sizing:border-box; } body { margin:0; padding:24px 16px 48px; background:var(--bg); color:var(--ink); font-family:'Segoe UI',system-ui,sans-serif; }
+main { max-width:960px; margin:0 auto; } h1 { margin:0 0 4px; font-size:1.6rem; } p.sub { margin:0 0 18px; color:var(--muted); }
+video { width:100%; border-radius:14px; background:#000; display:block; box-shadow:0 8px 30px rgba(0,0,0,.35); }
+.card { background:var(--card); border-radius:14px; padding:16px 18px; margin-top:18px; } h2 { margin:0 0 8px; font-size:1.05rem; color:var(--gold); }
+ul { list-style:none; padding:0; margin:0; } li { display:flex; gap:10px; align-items:center; padding:6px 0; border-top:1px solid rgba(128,150,170,.25); } li:first-child { border-top:0; }
+li span { margin-left:auto; color:var(--muted); font-size:.9rem; } button { font:inherit; font-weight:600; color:#1a1a2e; background:var(--gold); border:0; border-radius:8px; padding:3px 10px; cursor:pointer; }
+small, .note { color:var(--muted); font-size:.9rem; line-height:1.5; }
+</style></head><body><main>
+<h1>KazWorld News</h1><p class="sub">Prototype for quality review. The video loops like a station would. Generated 21 October 2026.</p>
+<video id="v" src="kazworld_news_loop.mp4" poster="poster.jpg" controls loop playsinline preload="metadata"></video>
+<div class="card"><h2>Chapters (135 s per loop)</h2><ul><li><button data-t="0.00">0:00</button> Open <span>8 s</span></li><li><button data-t="8.12">0:08</button> Cash to relocate: new rules from January 2027 <span>28 s</span></li><li><button data-t="35.75">0:35</button> Kazakhstan sets a gold record at the Asian Para Games <span>28 s</span></li><li><button data-t="63.79">1:03</button> Astana flies the flag ahead of Republic Day <span>26 s</span></li><li><button data-t="89.35">1:29</button> Sign-off <span>6 s</span></li><li><button data-t="95.52">1:35</button> Weather and traffic <span>39 s</span></li></ul></div>
+<div class="card"><h2>What is real and what is generated</h2><p class="note">The presenter (Aigerim) is an AI-generated person; her voice is ElevenLabs text-to-speech reading English summaries I wrote from the linked articles. Headlines in Kazakh are the originals.
+Stories: Tengrinews, Egemen Qazaqstan, Sputnik Qazaqstan (21 October 2026). Weather: Open-Meteo. Map outlines: Natural Earth. Cutaway photos: Pexels. The road report uses road items from the same news feeds because live traffic data is not connected.
+Please check summaries against the original articles before any public use.</p></div>
+</main><script>document.querySelectorAll('button[data-t]').forEach(b=>b.addEventListener('click',()=>{const v=document.getElementById('v');v.currentTime=parseFloat(b.dataset.t);v.play();}));</script></body></html>
